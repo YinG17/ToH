@@ -1,0 +1,19 @@
+<div class="col-md-3 col-sm-3 m-auto">
+  <div class="card" *ngIf="hero">
+    <div class="card-header text-center">
+      <span class="badge badge-dark text-left"> {{hero.id}} </span> {{hero.name | titlecase}}
+    </div>
+    <div class="card-body text-center">
+      <p><span>Rank: </span> {{ hero.rank }}</p>
+      <div>
+        <label>Name:
+          <input class="p-1" [(ngModel)]="hero.name" placeholder="name" />
+        </label>
+      </div>
+      <hr>
+      <div class="footer">
+        <a class="btn btn-light" (click)="goBack()">Back</a>
+      </div>
+    </div>
+  </div>
+</div>
