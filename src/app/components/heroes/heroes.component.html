@@ -1,12 +1,16 @@
-<div class="col-md-2 col-sm-2 m-auto">
-  <ul class="text-center">
-    <li class="p-2" *ngFor="let hero of heroes" (click)="onSelect(hero)">
-      <a class="btn btn-primary" routerLink="/detail/{{hero.id}}">
-        <span class="badge badge-light"> {{ hero.id }}</span>
+<div class="col-md-3 m-auto">
+  <div class="card m-auto">
+    <div class="card-header">
+      <button class="btn btn-success"> ADD HERO </button>
+      <button class="btn btn-danger float-right"> DELETE HERO </button>
+    </div>
+    <div class="p-2 card-body">
+      <a class="btn btn-primary" *ngFor="let hero of heroes" routerLink="/detail/{{hero.id}}">
+        <span class="badge badge-light float-left"> {{ hero.id }}</span>
         {{ hero.name | titlecase }}
       </a>
-    </li>
-  </ul>
+    </div>
+  </div>
 </div>
 
-<app-hero-detail [hero]="selectedHero"></app-hero-detail>
+<app-hero-detail></app-hero-detail>

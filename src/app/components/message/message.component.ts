@@ -8,7 +8,15 @@ import { MessagesService } from '../../services/messages.service';
   styleUrls: ['./message.component.scss']
 })
 export class MessageComponent implements OnInit {
+  messages = [];
+
   constructor(public messageService: MessagesService) {}
 
-  ngOnInit() {}
+  getMessages() {
+    this.messages = this.messageService.messages;
+  }
+
+  ngOnInit() {
+    this.getMessages();
+  }
 }
