@@ -5,11 +5,11 @@
     </div>
     <div class="p-2 card-body">
       <div *ngFor="let hero of heroes">
-        <a class="btn btn-primary float-left" routerLink="/detail/{{hero.id}}">
+        <a title="View Info" class="btn btn-primary float-left" routerLink="/detail/{{hero.id}}">
           <span class="badge badge-light float-left"> {{ hero.id }}</span>
           {{ hero.name | titlecase }}
         </a>
-        <a id="delete" class="btn btn-danger float-right"> DELETE HERO </a>
+        <a title="Delete Hero" id="delete" class="btn btn-danger float-right" (click)="delete(hero)"> X </a>
       </div>
     </div>
   </div>
