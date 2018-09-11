@@ -1,9 +1,12 @@
 <div class="col-md-3 m-auto">
 
-  <ul *ngIf="logService.messages.length">
-    <li *ngFor="let log of logService.messages">
+  <div class="card" *ngIf="logService.messages.length">
+    <div class="card-body" *ngFor="let log of logService.messages">
       > {{ log }}
-    </li>
-  </ul>
+    </div>
+    <div class="card-footer">
+      <a class="btn btn-warning" (click)="logService.clear()"> CLEAR LOG </a>
+    </div>
+  </div>
 
 </div>

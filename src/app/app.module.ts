@@ -9,6 +9,7 @@ import { HeroesComponent } from './components/heroes/heroes.component';
 import { HeroDetailComponent } from './components/hero-detail/hero-detail.component';
 import { MessageComponent } from './components/message/message.component';
 import { HeroLogComponent } from './components/hero-log/hero-log.component';
+import { AddHeroComponent } from './components/heroes/add-hero/add-hero.component';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -20,6 +21,7 @@ import { AppRoutingModule } from './app-routing.module';
     HeroesComponent,
     HeroDetailComponent,
     MessageComponent,
+    AddHeroComponent,
     HeroLogComponent
   ],
   imports: [BrowserModule, FormsModule, AppRoutingModule],
