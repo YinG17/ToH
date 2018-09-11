@@ -14,6 +14,8 @@ import { HeroService } from '../../services/hero.service';
 export class HeroesComponent implements OnInit {
   heroes: Hero[];
 
+  modalShow = false;
+
   constructor(private heroService: HeroService) {}
 
   getHeroes(): void {
@@ -22,5 +24,10 @@ export class HeroesComponent implements OnInit {
 
   ngOnInit() {
     this.getHeroes();
+  }
+
+  delete(hero: Hero): void {
+    this.heroes = this.heroes.filter(h => h !== hero);
+    this.heroService.deleteHero(hero).subscribe();
   }
 }
